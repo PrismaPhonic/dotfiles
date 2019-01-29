@@ -3,12 +3,13 @@
       create: true
       relink: true
 
-- clean: ['~', '~/.config', '~/.gnupg', '~/.autorandr', '~/.bin']
+- clean: ['~', '~/.config', '~/.gnupg', '~/.autorandr', '~/.bin', '/usr/share/zsh/scripts/base16-shell']
 
 - shell:
   - rm -r ~/.gnupg/*
   - rm -r ~/.config/autostart
   - rm -r ~/.config/bspwm
+  - sudo rm -r /usr/share/zsh/scripts/base16-shell/*
   - rm ~/.config/compton.conf
   - rm -r ~/.config/gtk-3.0
   - rm -r ~/.config/GTKmenu
@@ -26,6 +27,7 @@
   - rm ~/.limepanelrc
   - rm ~/.gitconfig
   - rm ~/.lemonpanelrc
+  - sudo ln -s zsh/base16-shell/* /usr/share/zsh/scripts/base16-shell/
 
 - link:
     ~/.dotfiles: ''
