@@ -19,6 +19,13 @@
   - rm -r ~/.config/wal
   - rm -r ~/.autorandr/*
   - rm -r ~/.bin/*
+  - rm ~/.tmux.conf
+  - rm ~/.vimrc
+  - rm ~/.zshrc
+  - rm ~/.xinitrc
+  - rm ~/.limepanelrc
+  - rm ~/.gitconfig
+  - rm ~/.lemonpanelrc
 
 - link:
     ~/.dotfiles: ''
