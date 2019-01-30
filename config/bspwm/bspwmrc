@@ -116,7 +116,12 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 #sxhkd &
 #Source autostartfile. Uncomment this if you use bspwm-git
 #. $HOME/.config/bspwm/autostart
-/$HOME/.bin/mylime &
+
+# Custom limebar file
+$HOME/.bin/mylime &
+
+# Polybar launch instead (pick this or limebar above)
+$HOME/.config/polybar/launch.sh
 
 # Swap caps and escape keys
 #setxkbmap -option caps:escape
