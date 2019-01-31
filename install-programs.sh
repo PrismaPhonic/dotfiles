@@ -31,3 +31,12 @@ nvm use node
 
 # Install neovim npm module globally
 npm install -g neovim
+
+# Install yay
+sudo pacman -Sy yay
+
+# Install gitflow
+yay -S gitflow-avh-git
+
+# Install gulp
+npm install -g gulp
