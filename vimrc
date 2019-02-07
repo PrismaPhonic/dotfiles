@@ -40,6 +40,9 @@ Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'suan/vim-instant-markdown'
 
+" Jinja2 syntax highlighting - configured to run on tera template files
+Plug 'glench/vim-jinja2-syntax'
+
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
@@ -75,7 +78,7 @@ if !has('gui_running')
 endif
 
 " <Leader>s for Rg search
-nnoremap <Leader>s :Rg<CR>
+nnoremap <C-p> :Rg<CR>
 let g:fzf_layout = { 'down': '~20%' }
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -149,6 +152,10 @@ autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype rb setlocal ts=2 sw=2 expandtab
 autocmd Filetype rust setlocal ts=4 sw=4 expandtab
 autocmd Filetype rs setlocal ts=4 sw=4 expandtab
+
+
+" Set jinja2 syntax highlighting to effect tera template files
+autocmd BufNewFile,BufRead *.tera set ft=jinja
 
 " " Autoclose completion window when done with it
 " let g:ycm_autoclose_preview_window_after_completion=1
@@ -246,7 +253,7 @@ let g:ale_rust_cargo_check_all_targets = 1
 " language server protocol
 let g:LanguageClient_settingsPath = "~/.vim/settings.json"
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
     \ }
 let g:LanguageClient_autoStart = 1
 
