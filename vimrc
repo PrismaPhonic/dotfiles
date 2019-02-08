@@ -184,15 +184,6 @@ augroup numbertoggle
   autocmd CmdwinEnter * set norelativenumber
 augroup END
 
-
-" Setup VIM to use powerline
-" set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim
-" set laststatus=2
-" set showtabline=1
-" set noshowmode
-" set t_Co=256
-" let g:powerline_pycmd = "py3" 
-
 " Change <Leader> to a comma and set timeout longer
 let mapleader=","
 let maplocalleader=","
