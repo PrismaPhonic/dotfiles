@@ -16,29 +16,25 @@ call plug#begin('~/.local/share/nvim/plugged')
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 Plug 'tmhedberg/SimpylFold'
-" Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-scripts/indentpython.vim'
 Plug 'tpope/vim-surround'
-" Plug 'Valloric/YouCompleteMe'
-" Plug 'vim-syntastic/syntastic'
 Plug 'w0rp/ale'
 Plug 'machakann/vim-highlightedyank'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
-" Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'slim-template/vim-slim'
-"Plug 'maksimr/vim-jsbeautify'
 Plug 'prettier/vim-prettier'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-commentary'
-"Plug 'powerline/powerline'
 Plug 'itchyny/lightline.vim'
 Plug 'vim-scripts/localvimrc'
 Plug 'mxw/vim-jsx'
-" Plug 'tpope/vim-rails'
-" Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
 Plug 'suan/vim-instant-markdown'
+
+" Jinja2 syntax highlighting - configured to run on tera template files
+Plug 'glench/vim-jinja2-syntax'
 
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
@@ -75,7 +71,7 @@ if !has('gui_running')
 endif
 
 " <Leader>s for Rg search
-nnoremap <Leader>s :Rg<CR>
+nnoremap <C-p> :Rg<CR>
 let g:fzf_layout = { 'down': '~20%' }
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -150,6 +146,10 @@ autocmd Filetype rb setlocal ts=2 sw=2 expandtab
 autocmd Filetype rust setlocal ts=4 sw=4 expandtab
 autocmd Filetype rs setlocal ts=4 sw=4 expandtab
 
+
+" Set jinja2 syntax highlighting to effect tera template files
+autocmd BufNewFile,BufRead *.tera set ft=jinja
+
 " " Autoclose completion window when done with it
 " let g:ycm_autoclose_preview_window_after_completion=1
 " map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -176,15 +176,6 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
   autocmd CmdwinEnter * set norelativenumber
 augroup END
-
-
-" Setup VIM to use powerline
-" set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim
-" set laststatus=2
-" set showtabline=1
-" set noshowmode
-" set t_Co=256
-" let g:powerline_pycmd = "py3" 
 
 " Change <Leader> to a comma and set timeout longer
 let mapleader=","
@@ -246,7 +237,7 @@ let g:ale_rust_cargo_check_all_targets = 1
 " language server protocol
 let g:LanguageClient_settingsPath = "~/.vim/settings.json"
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
     \ }
 let g:LanguageClient_autoStart = 1
 

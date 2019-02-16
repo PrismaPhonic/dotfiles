@@ -27,7 +27,7 @@
   - rm ~/.limepanelrc
   - rm ~/.gitconfig
   - rm ~/.lemonpanelrc
-  - sudo ln -s zsh/base16-shell/* /usr/share/zsh/scripts/base16-shell/
+  - sudo ln -sf $(realpath ~/dotfiles/zsh/base16-shell/*) /usr/share/zsh/scripts/base16-shell/
 
 - link:
     ~/.dotfiles: ''

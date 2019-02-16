@@ -209,6 +209,3 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 # Add user bin path
 export PATH="$PATH:/usr/bin"
-
-# Add postgres env variable
-export PSQL_URL=postgres://pmfarr:030989Pfchang@localhost/
