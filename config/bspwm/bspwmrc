@@ -1,5 +1,5 @@
 #! /bin/sh
-gap=30
+gap=0
 PANEL_HEIGHT=50
 export gap
 export PANEL_HEIGHT
@@ -122,6 +122,9 @@ $HOME/.bin/mylime &
 
 # Polybar launch instead (pick this or limebar above)
 $HOME/.config/polybar/launch.sh
+
+## run sound tray
+pasystray
 
 # Swap caps and escape keys
 #setxkbmap -option caps:escape

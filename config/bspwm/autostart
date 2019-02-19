@@ -40,3 +40,4 @@ xcape -e 'Super_L=Super_L|Shift_L|space' &
 ## Gnome keyring
 gnome-keyring-daemon &
 pcmanfm -d &
+
