@@ -40,3 +40,13 @@ yay -S gitflow-avh-git
 
 # Install gulp
 npm install -g gulp
+
+# Install mono (C# development)
+sudo pacman -Sy mono
+
+# Install mono IDE
+yay -S monodevelop-stable
+
+# Install mono server for vim
+yay -S omnisharp-roslyn
+
