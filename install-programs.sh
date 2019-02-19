@@ -50,3 +50,6 @@ yay -S monodevelop-stable
 # Install mono server for vim
 yay -S omnisharp-roslyn
 
+# Install dotnet core files
+sudo pacman -Sy dotnet-runtime
+sudo pacman -Sy dotnet-sdk
