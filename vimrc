@@ -33,6 +33,11 @@ Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'suan/vim-instant-markdown'
 
+" C# stuff
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'tpope/vim-dispatch'
+Plug 'radenling/vim-dispatch-neovim'
+
 " Jinja2 syntax highlighting - configured to run on tera template files
 Plug 'glench/vim-jinja2-syntax'
 
@@ -238,6 +243,7 @@ let g:ale_rust_cargo_check_all_targets = 1
 let g:LanguageClient_settingsPath = "~/.vim/settings.json"
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+    \ 'c#': ['']
     \ }
 let g:LanguageClient_autoStart = 1
 
