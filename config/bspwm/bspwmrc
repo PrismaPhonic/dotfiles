@@ -123,3 +123,6 @@ pasystray
 
 # Swap caps and escape keys
 #setxkbmap -option caps:escape
+
+## Fixed a display issue with Jetbrains IDEs
+export _JAVA_AWT_WM_NONREPARENTING=1

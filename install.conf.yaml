@@ -3,13 +3,14 @@
       create: true
       relink: true
 
-- clean: ['~', '~/.config', '~/.gnupg', '~/.autorandr', '~/.bin', '/usr/share/zsh/scripts/base16-shell']
+- clean: ['~', '~/.config', '~/.gnupg', '~/.autorandr', '~/.bin', '/usr/share/zsh/scripts/base16-shell', '/etc']
 
 - shell:
   - rm -r ~/.gnupg/*
   - rm -r ~/.config/autostart
   - rm -r ~/.config/bspwm
   - sudo rm -r /usr/share/zsh/scripts/base16-shell/*
+  - sudo rm /etc/profile
   - rm ~/.config/compton.conf
   - rm -r ~/.config/gtk-3.0
   - rm -r ~/.config/GTKmenu
@@ -38,6 +39,9 @@
     ~/.xinitrc:
     ~/.lemonpanelrc:
     ~/.limepanelrc:
+    /etc/profile:
+      path: profile
+      relink: true
     ~/.config/:
       glob: true
       path: config/*

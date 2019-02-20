@@ -209,3 +209,6 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 # Add user bin path
 export PATH="$PATH:/usr/bin"
+
+# This fixes a display issue with Jetbrains IDEs on Linux
+export _JAVA_AWT_WM_NONREPARENTING=1

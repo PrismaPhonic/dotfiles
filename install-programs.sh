@@ -53,3 +53,6 @@ yay -S omnisharp-roslyn
 # Install dotnet core files
 sudo pacman -Sy dotnet-runtime
 sudo pacman -Sy dotnet-sdk
+
+# Install Rider IDE (C#)
+yay --editmenu -S rider
