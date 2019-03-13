@@ -32,6 +32,7 @@ Plug 'vim-scripts/localvimrc'
 Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'suan/vim-instant-markdown'
+Plug 'junegunn/goyo.vim'
 
 " C# stuff
 Plug 'OmniSharp/omnisharp-vim'

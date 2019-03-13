@@ -56,3 +56,6 @@ sudo pacman -Sy dotnet-sdk
 
 # Install Rider IDE (C#)
 yay --editmenu -S rider
+
+# Install Unity
+yay -S unityhub
