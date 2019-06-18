@@ -114,3 +114,4 @@ mkdir temp
 cd temp && wget https://download.cloud.lastpass.com/linux/lplinux.tar.bz2 && tar xjvf lplinux.tar.bz2
 ./install_lastpass.sh
 cd ../ && sudo rm -r temp
+
