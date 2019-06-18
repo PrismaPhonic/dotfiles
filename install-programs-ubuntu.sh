@@ -101,9 +101,7 @@ sudo apt install code
 sudo snap install webstorm --classic
 
 # Install Goland
-mkdir temp
-cd temp && wget https://download.jetbrains.com/go/goland-2019.1.3.tar.gz && sudo tar xzf goland-2019.1.3.tar.gz -C /opt
-cd ../ && sudo rm -r temp
+sudo snap install goland --classic
 
 # Fix Ownership on HomeDIR (might not be necessary)
 # sudo gpgconf --kill dirmngr
