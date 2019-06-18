@@ -39,6 +39,9 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-dispatch'
 Plug 'radenling/vim-dispatch-neovim'
 
+" Golang stuff
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Jinja2 syntax highlighting - configured to run on tera template files
 Plug 'glench/vim-jinja2-syntax'
 
