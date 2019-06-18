@@ -80,9 +80,24 @@ sudo apt install monodevelop
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
+# Install Snappy
+sudo apt install snapd snapd-xdg-open
+
 # Install Visual Studio Code
 sudo apt install software-properties-common apt-transport-https wget
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt update
 sudo apt install code
+
+# Install Webstorm
+sudo snap install webstorm --classic
+
+# Install Goland
+mkdir temp
+cd temp && wget https://download.jetbrains.com/go/goland-2019.1.3.tar.gz && sudo tar xzf goland-2019.1.3.tar.gz -C /opt
+sudo rm -r temp
+
+# Fix Ownership on HomeDIR (might not be necessary)
+# sudo gpgconf --kill dirmngr
+# sudo chown -R $USER:$USER ~/.gnupg
