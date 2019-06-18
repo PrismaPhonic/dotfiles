@@ -1,3 +1,17 @@
+## Adding to paths FIRST - necessary for Ubuntu
+
+# Adding cargo path
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# Add user bin path
+export PATH="$PATH:/usr/bin"
+
+# Add bin to path (ubuntu messes up and needs this i guess)
+export PATH="$PATH:/bin"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
 ## Options section
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
@@ -198,17 +212,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # adding powerline to z-shell
-powerline-daemon -q
-. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+powerline-daemon -q 
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# Arch check powerline
+if [[ -r /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
 
-# Adding cargo path
-export PATH="$PATH:$HOME/.cargo/bin"
-
-# Add user bin path
-export PATH="$PATH:/usr/bin"
+# Ubuntu check powerline
+if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
+    . /usr/share/powerline/bindings/zsh/powerline.zsh
+fi
 
 # This fixes a display issue with Jetbrains IDEs on Linux
 export _JAVA_AWT_WM_NONREPARENTING=1
