@@ -96,8 +96,14 @@ sudo snap install webstorm --classic
 # Install Goland
 mkdir temp
 cd temp && wget https://download.jetbrains.com/go/goland-2019.1.3.tar.gz && sudo tar xzf goland-2019.1.3.tar.gz -C /opt
-sudo rm -r temp
+cd ../ && sudo rm -r temp
 
 # Fix Ownership on HomeDIR (might not be necessary)
 # sudo gpgconf --kill dirmngr
 # sudo chown -R $USER:$USER ~/.gnupg
+
+# Install Lastpass
+mkdir temp
+cd temp && wget https://download.cloud.lastpass.com/linux/lplinux.tar.bz2 && tar xjvf lplinux.tar.bz2
+./install_lastpass.sh
+cd ../ && sudo rm -r temp
