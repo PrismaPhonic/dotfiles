@@ -106,6 +106,10 @@ sudo snap install goland --classic
 # Setup Golang tooling
 sudo snap install go --classic
 
+# Setup workspace for golang stuff
+mkdir ~/code
+mkdir ~/code/go
+
 # Fix Ownership on HomeDIR (might not be necessary)
 # sudo gpgconf --kill dirmngr
 # sudo chown -R $USER:$USER ~/.gnupg

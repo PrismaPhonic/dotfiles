@@ -30,3 +30,6 @@ unset TERMCAP
 # Man is much better than us at figuring this out
 unset MANPATH
 BROWSER=/usr/bin/firefox-developer-edition
+
+# Export GoPATH - this is workspace for golang project
+export GOPATH=$HOME/code/go
