@@ -1,38 +1,38 @@
 #!/bin/sh
 
 # Install curl
-sudo apt-get install curl
+sudo apt install curl
 
 # Install tmux
-sudo apt-get install tmux
+sudo apt install tmux
 
 # Install Zshell
-sudo apt-get install zsh
+sudo apt install zsh
 sudo chsh -s /usr/bin/zsh root
 sudo chsh -s /usr/bin/zsh pmfarr
 
 # Install oh-my-zsh
-sudo apt-get install wget git
+sudo apt install wget git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install z-shell plugins
-sudo apt-get install zsh-syntax-highlighting
+sudo apt install zsh-syntax-highlighting
 sudo mkdir /usr/share/zsh/plugins
 sudo cp -R /usr/share/zsh-syntax-highlighting /usr/share/zsh/plugins/zsh-syntax-highlighting
 sudo git clone https://github.com/zsh-users/zsh-history-substring-search.git /usr/share/zsh/plugins/zsh-history-substring-search
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git /usr/share/zsh/plugins/zsh-autosuggestions
 
 # Install powerline and addons
-sudo apt-get install powerline
-sudo apt-get install python3-powerline
+sudo apt install powerline
+sudo apt install python3-powerline
 
 # Install neovim
 sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get install neovim
+sudo apt update
+sudo apt install neovim
 
 # Install pip
-sudo apt-get install python-dev python-pip python3-dev python3-pip
+sudo apt install python-dev python-pip python3-dev python3-pip
 
 # Install python neovim module
 sudo pip3 install --upgrade pynvim
@@ -61,7 +61,7 @@ nvm use node
 npm install -g neovim
 
 # Install gitflow
-sudo apt-get install git-flow
+sudo apt install git-flow
 
 # Install gulp
 npm install -g gulp
@@ -74,8 +74,15 @@ sudo apt update
 sudo apt install mono-devel
 
 # Install mono IDE
-sudo apt-get install monodevelop
+sudo apt install monodevelop
 
 # Install dotnet core files
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
+
+# Install Visual Studio Code
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install code
