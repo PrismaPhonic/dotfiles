@@ -3,6 +3,13 @@
 # Install curl
 sudo apt install curl
 
+# Install git
+sudo apt install git
+
+# Setup git
+git config --global user.name "Peter Farr"
+git config --global user.email "Peter@PrismaPhonic.com"
+
 # Install tmux
 sudo apt install tmux
 
