@@ -103,6 +103,9 @@ sudo snap install webstorm --classic
 # Install Goland
 sudo snap install goland --classic
 
+# Setup Golang tooling
+sudo snap install go --classic
+
 # Fix Ownership on HomeDIR (might not be necessary)
 # sudo gpgconf --kill dirmngr
 # sudo chown -R $USER:$USER ~/.gnupg
