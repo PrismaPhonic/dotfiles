@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=Firefox Developer
+Name=Firefox Developer Edition
 GenericName=Firefox Developer Edition
-Exec=/opt/firefox-developer-edition/firefox/firefox
+Exec=/opt/firefox-developer-edition/firefox
 Terminal=false
-Icon=/opt/firefox-developer-edition/firefox/browser/icons/mozicon128.png
+Icon=/opt/firefox-developer-edition/browser/chrome/icons/default/default128.png
 Type=Application
-Csdfategories=Application;Network;X-Developer;
+Categories=Application;Network;X-Developer;
 Comment=Firefox Developer Edition Web Browser.
