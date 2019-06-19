@@ -134,8 +134,8 @@ sudo apt install stterm
 cargo install ripgrep
 
 # Install alacritty
-add-apt-repository ppa:mmstick76/alacritty
-apt install alacritty
+sudo add-apt-repository ppa:mmstick76/alacritty
+sudo apt install alacritty
 
 # Install Firefox Developer Edition
 # Must be done manually - desktop file for launching will be auto linked when
