@@ -27,6 +27,7 @@
   - rm ~/.xinitrc
   - rm ~/.limepanelrc
   - rm ~/.gitconfig
+  - rm ~/.profile
   - rm ~/.lemonpanelrc
   - sudo ln -sf $(realpath ~/dotfiles/zsh/base16-shell/*) /usr/share/zsh/scripts/base16-shell/
 
@@ -39,6 +40,9 @@
     ~/.xinitrc:
     ~/.lemonpanelrc:
     ~/.limepanelrc:
+    ~/.profile:
+      path: home-profile
+      relink: true
     /etc/profile:
       path: profile
       relink: true
