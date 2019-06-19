@@ -7,6 +7,7 @@ sudo apt install git \
                       libxcb-icccm4-dev \
                       libxcb-keysyms1-dev \
                       libxcb-xinerama0-dev \
+		      libxcb-shape0-dev \
                       libasound2-dev \
                       gcc \
                       make \
