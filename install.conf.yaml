@@ -40,6 +40,9 @@
     ~/.xinitrc:
     ~/.lemonpanelrc:
     ~/.limepanelrc:
+    ~/.bspwm-run.sh:
+      path: bspwm-run.sh
+      relink: true
     ~/.profile:
       path: home-profile
       relink: true

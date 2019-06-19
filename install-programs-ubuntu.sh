@@ -126,3 +126,8 @@ cd ../ && sudo rm -r temp
 
 # Install fonts
 sudo apt install xfonts-terminus console-terminus
+
+# Install stterm
+sudo apt install stterm
+
+# Install Firefox Developer Edition
