@@ -120,3 +120,6 @@ cd temp && wget https://download.cloud.lastpass.com/linux/lplinux.tar.bz2 && tar
 ./install_lastpass.sh
 cd ../ && sudo rm -r temp
 
+## BSPWM INSTALL
+
+./install-bspwm-ubuntu.sh
