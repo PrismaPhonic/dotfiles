@@ -40,6 +40,9 @@
     ~/.xinitrc:
     ~/.lemonpanelrc:
     ~/.limepanelrc:
+    /usr/share/applications/firefox-developer-edition.desktop:
+      path: firefox-developer-edition.desktop
+      relink: true
     ~/.bspwm-run.sh:
       path: bspwm-run.sh
       relink: true

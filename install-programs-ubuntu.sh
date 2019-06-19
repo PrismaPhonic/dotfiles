@@ -130,4 +130,18 @@ sudo apt install xfonts-terminus console-terminus
 # Install stterm
 sudo apt install stterm
 
+# Install ripgrep
+cargo install ripgrep
+
+# Install alacritty
+add-apt-repository ppa:mmstick76/alacritty
+apt install alacritty
+
 # Install Firefox Developer Edition
+# Must be done manually - desktop file for launching will be auto linked when
+# you run the main dotfile script installer
+
+# To install manually, download the tar from firefox website, and extract the
+# contents of the firefox folder into a firefox-developer-edition folder inside
+# of /opt
+
