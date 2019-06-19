@@ -123,3 +123,6 @@ cd ../ && sudo rm -r temp
 ## BSPWM INSTALL
 
 ./install-bspwm-ubuntu.sh
+
+# Install fonts
+sudo apt install xfonts-terminus console-terminus
