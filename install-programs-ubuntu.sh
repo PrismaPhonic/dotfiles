@@ -13,6 +13,15 @@ git config --global user.email "Peter@PrismaPhonic.com"
 # Install tmux
 sudo apt install tmux
 
+# Install Compton
+sudo apt install compton
+
+# Install rofi
+sudo apt install rofi
+
+# Install ranger
+sudo apt install ranger caca-utils highlight atool w3m poppler-utils mediainfo
+
 # Install Zshell
 sudo apt install zsh
 sudo chsh -s /usr/bin/zsh root

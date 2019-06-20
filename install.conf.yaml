@@ -40,6 +40,7 @@
     ~/.xinitrc:
     ~/.lemonpanelrc:
     ~/.limepanelrc:
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
     /usr/share/applications/firefox-developer-edition.desktop:
       path: firefox-developer-edition.desktop
       relink: true
