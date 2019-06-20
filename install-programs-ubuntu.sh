@@ -16,11 +16,48 @@ sudo apt install tmux
 # Install Compton
 sudo apt install compton
 
+# Install feh for wallpapers in bspwm
+sudo apt install feh
+
 # Install rofi
 sudo apt install rofi
 
 # Install ranger
 sudo apt install ranger caca-utils highlight atool w3m poppler-utils mediainfo
+
+# Install spacefm for bspwm
+sudo apt install spacefm
+
+## BSPWM INSTALL
+
+./install-bspwm-ubuntu.sh
+
+## TODO: Manual install for networkmanager-dmenu
+
+# Install custom zevv-peep font
+mkdir font-temp
+cd font-temp
+wget http://zevv.nl/play/code/zevv-peep//zevv-peep-iso8859-15-07x14.bdf
+wget http://zevv.nl/play/code/zevv-peep//zevv-peep-iso8859-15-08x16.bdf
+wget http://zevv.nl/play/code/zevv-peep//zevv-peep-iso8859-15-10x20.bdf
+sudo cp zevv-peep-iso8859* /usr/share/fonts/X11/misc/
+sudo mkfontdir /usr/share/fonts/X11/misc
+sudo xset +fp /usr/share/fonts/X11/misc
+cd ../
+rm -r font-temp
+
+# Install limebar dependencies
+sudo apt install rxvt-unicode \
+	zenity \
+	conky-cli \
+	wireless-tools \
+	xdotool \
+	suckless-tools \
+	wmctrl \
+	xtitle \
+	fonts-powerline \
+
+
 
 # Install Zshell
 sudo apt install zsh
@@ -129,9 +166,6 @@ cd temp && wget https://download.cloud.lastpass.com/linux/lplinux.tar.bz2 && tar
 ./install_lastpass.sh
 cd ../ && sudo rm -r temp
 
-## BSPWM INSTALL
-
-./install-bspwm-ubuntu.sh
 
 # Install fonts
 sudo apt install xfonts-terminus console-terminus
