@@ -46,6 +46,19 @@ sudo xset +fp /usr/share/fonts/X11/misc
 cd ../
 rm -r font-temp
 
+# Manually install ionicons since Ubuntu doesn't have a package
+mkdir font-temp
+cd font-temp
+wget -qO- https://github.com/ionic-team/ionicons/archive/v4.5.8.tar.gz | tar xzf
+cd ionicons-4.5.8
+sudo mkdir /usr/local/share/fonts/TTF
+sudo mv docs/fonts/ionicons.ttf /usr/local/share/fonts/TTF/ionicons.ttf
+sudo chown root:staff /usr/local/share/fonts/TTF -R
+sudo chmod 644 /usr/local/share/fonts/TTF/* -R
+sudo chmod 755 /usr/local/share/fonts/TTF
+cd ../../
+rm -r font-temp
+
 # Install limebar dependencies
 sudo apt install rxvt-unicode \
 	zenity \
