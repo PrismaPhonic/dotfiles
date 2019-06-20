@@ -73,6 +73,7 @@ done
 
 # Launch sxhkd:
 [ -e /bin/dash ] && export SXHKD_SHELL="/bin/dash"
+
 sxhkd &
-# Launch bspwm:
-bspwm
+urxvt &
+exec bspwm

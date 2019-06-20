@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=Bspwm
 Comment=Binary space partitioning window manager
-Exec=bspwm-session
+Exec=dbus-launch --sh-syntax --exit-with-session bspwm-session
 Type=Application
 X-LightDM-DesktopName=Bspwm
 DesktopNames=Bspwm

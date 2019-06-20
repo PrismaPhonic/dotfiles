@@ -115,8 +115,8 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 #Keybindings daemon
 #sxhkd &
 #Source autostartfile. Uncomment this if you use bspwm-git
-#. $HOME/.config/bspwm/autostart
-/$HOME/.bin/mylime &
+$HOME/.config/bspwm/autostart &
+$HOME/.bin/mylime &
 
 ## run sound tray
 pasystray
