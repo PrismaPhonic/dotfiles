@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Bspwm
+Comment=Binary space partitioning window manager
+Exec=dbus-launch --sh-syntax --exit-with-session bspwm-session
+Type=Application
+X-LightDM-DesktopName=Bspwm
+DesktopNames=Bspwm
+Keywords=tiling;wm;windowmanager;window;manager;

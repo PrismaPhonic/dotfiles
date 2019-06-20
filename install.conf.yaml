@@ -30,6 +30,7 @@
   - rm ~/.profile
   - rm ~/.lemonpanelrc
   - sudo ln -sf $(realpath ~/dotfiles/zsh/base16-shell/*) /usr/share/zsh/scripts/base16-shell/
+  - sudo cp bspwm-session /usr/bin/bspwm-session
 
 - link:
     ~/.dotfiles: ''
@@ -40,6 +41,9 @@
     ~/.xinitrc:
     ~/.lemonpanelrc:
     ~/.limepanelrc:
+    /usr/share/xsessions/bspwm.desktop:
+      path: bspwm.desktop
+      relink: true
     ~/.config/alacritty/alacritty.yml: alacritty.yml
     /usr/share/applications/firefox-developer-edition.desktop:
       path: firefox-developer-edition.desktop
