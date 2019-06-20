@@ -59,7 +59,9 @@ sudo chmod 755 /usr/local/share/fonts/TTF
 cd ../../
 rm -r font-temp
 
-# Install limebar dependencies
+## TODO: Look up what rootmenu is from bspwm manjaro project
+
+# Install lemonpanel dependencies
 sudo apt install rxvt-unicode \
 	zenity \
 	conky-cli \
@@ -69,8 +71,20 @@ sudo apt install rxvt-unicode \
 	wmctrl \
 	xtitle \
 	fonts-powerline \
+	xdg-utils \
+	update-notifier \
+	dash
 
-
+# Install lemonpanel
+mkdir temp
+cd temp
+git clone https://github.com/Chrysostomus/lemonpanel.git
+sudo cp lemonpanel/bin/lemonpanel /usr/bin/lemonpanel
+sudo chmod 755 /usr/bin/lemonpanel
+sudo cp -r lemonpanel/bin /usr
+sudo chmod a+x /usr/bin
+cd ../../
+sudo rm -r temp
 
 # Install Zshell
 sudo apt install zsh
