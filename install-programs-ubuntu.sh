@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Make sure we are up to date before starting
+sudo apt update
+
 # Install curl
 sudo apt install curl
 
@@ -227,3 +230,12 @@ sudo apt install alacritty
 # contents of the firefox folder into a firefox-developer-edition folder inside
 # of /opt
 
+# Install and setup docker
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo adduser pmfarr docker
+
+# Install and setup mysql
+sudo apt install mysql-server
+sudo mysql_secure_installation
