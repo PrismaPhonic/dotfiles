@@ -39,6 +39,3 @@ cd ../xdo/ && make && sudo make install
 cd ~/development/github.com/krypt-n
 git clone https://github.com/krypt-n/bar.git
 cd bar && make && sudo make install
-
-# Add bspwm to xsessions
-sudo cp ~/development/github.com/baskerville/bspwm/contrib/freedesktop/bspwm.desktop /usr/share/xsessions/bspwm.desktop
