@@ -10,6 +10,10 @@ sh ~/.fehbg &
 ## compositing. Required for shadows, transparency and stuff. 
 ## Reduces flicker. Disabling saves resources.
 compton -b &
+## load additional programs
+nm-applet &
+sh ~/.config/polybar/launch.sh &
+dbus-launch indicator-kdeconnect &
 ## enable local fonts in .fonts directory
 xset +fp /usr/share/fonts/local &
 xset +fp /usr/share/fonts/misc &
