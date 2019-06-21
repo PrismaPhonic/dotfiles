@@ -161,6 +161,10 @@ sudo apt install git-flow
 # Install gulp
 npm install -g gulp
 
+# Install eslint and prettier
+npm install -g eslint
+npm install -g prettier
+
 # Install mono (C# development)
 sudo apt install gnupg ca-certificates
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
@@ -172,8 +176,7 @@ sudo apt install mono-devel
 sudo apt install monodevelop
 
 # Install dotnet core files
-wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
+sudo snap install dotnet-sdk --classic
 
 # Install Snappy
 sudo apt install snapd snapd-xdg-open
@@ -239,3 +242,16 @@ sudo adduser pmfarr docker
 # Install and setup mysql
 sudo apt install mysql-server
 sudo mysql_secure_installation
+
+# Install kubectl
+sudo snap install kubectl --classic
+
+# Install postman
+sudo snap install postman
+
+# Install slack
+sudo snap install slack --classic
+
+# Install video and audio codecs
+sudo apt install libdvdnav4 libdvdread4 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libdvd-pkg
+sudo apt install ubuntu-restricted-extras
