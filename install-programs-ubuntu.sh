@@ -128,6 +128,9 @@ rustup install nightly
 # Install RLS
 rustup component add rls rust-analysis rust-src
 
+# Make sure cargo is available for rest of installs
+export PATH="$PATH:$HOME/.cargo/bin"
+
 # Install neovim npm module globally
 npm install -g neovim
 
