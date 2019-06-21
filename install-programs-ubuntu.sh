@@ -233,4 +233,6 @@ sudo snap install slack --classic
 
 # Install video and audio codecs
 sudo apt install libdvdnav4 libdvdread4 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libdvd-pkg
-sudo apt install ubuntu-restricted-extras
+
+# Commenting out for now because I keep getting a bug when installing this
+# sudo apt install ubuntu-restricted-extras
