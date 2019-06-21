@@ -16,6 +16,8 @@ sudo apt install git \
                       libx11-xcb-dev
 
 # Install bspwm and utils
+mkdir ~/development
+mkdir ~/development/github.com
 mkdir ~/development/github.com/defektive
 mkdir ~/development/github.com/baskerville
 mkdir ~/development/github.com/krypt-n

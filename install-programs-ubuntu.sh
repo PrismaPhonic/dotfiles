@@ -178,8 +178,8 @@ mkdir ~/code
 mkdir ~/code/go
 
 # Fix Ownership on HomeDIR (might not be necessary)
-# sudo gpgconf --kill dirmngr
-# sudo chown -R $USER:$USER ~/.gnupg
+sudo gpgconf --kill dirmngr
+sudo chown -R $USER:$USER ~/.gnupg
 
 # Install Lastpass
 mkdir temp
