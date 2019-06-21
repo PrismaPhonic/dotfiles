@@ -39,8 +39,12 @@
     ~/.gitconfig:
     ~/.zshrc: 
     ~/.xinitrc:
+    ~/.fehbg:
     ~/.lemonpanelrc:
     ~/.limepanelrc:
+    /usr/share/backgrounds/within.png:
+      path: backgrounds/within.png
+      relink: true
     /usr/share/xsessions/bspwm.desktop:
       path: bspwm.desktop
       relink: true
