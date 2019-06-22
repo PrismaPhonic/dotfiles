@@ -236,3 +236,9 @@ sudo apt install libdvdnav4 libdvdread4 gstreamer1.0-plugins-bad gstreamer1.0-pl
 
 # Commenting out for now because I keep getting a bug when installing this
 # sudo apt install ubuntu-restricted-extras
+
+# Install emacs because apparently it's necessary at Planetscale
+sudo snap install emacs --classic
+
+# Install minikube and all dependencies
+./install-minikube.sh
