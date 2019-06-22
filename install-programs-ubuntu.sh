@@ -218,8 +218,15 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo adduser pmfarr docker
 
+## UNCOMMENT IF YOU WANT MYSQL INSTEAD OF MARIADB
 # Install and setup mysql
-sudo apt install mysql-server
+# sudo apt install mysql-server
+
+# Install and setup mariadb
+sudo apt update
+sudo apt install mariadb-server
+sudo apt install mariadb-client
+sudo apt install libmariadb-dev
 sudo mysql_secure_installation
 
 # Install kubectl

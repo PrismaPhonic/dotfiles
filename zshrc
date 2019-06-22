@@ -12,6 +12,9 @@ export PATH="$PATH:/bin"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Add flavor of mysql for vitess
+export MYSQL_FLAVOR=MariaDB
+
 ## Options section
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
