@@ -231,3 +231,6 @@ sudo snap install emacs --classic
 
 # Install minikube and all dependencies
 ./install-minikube.sh
+
+# Get neofetch for coolness factor
+sudo apt install neofetch
