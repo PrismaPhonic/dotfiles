@@ -4,7 +4,7 @@
 umask 022
 
 # Set our default path
-PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.config/bspwm:$HOME/.config/bspwm/panel:$HOME/.bin:/snap/bin"
+PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.config/bspwm:$HOME/.config/bspwm/panel:$HOME/.bin:/snap/bin:/usr/local/go/bin"
 export PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
@@ -31,5 +31,8 @@ unset TERMCAP
 unset MANPATH
 BROWSER=/usr/bin/firefox-developer-edition
 
-# Export GoPATH - this is workspace for golang project
+# EXPORT IF INSTALLING WITH SNAP
+# export GOROOT=$HOME/code/go
+
 export GOPATH=$HOME/code/go
+export GOROOT=/usr/local/go

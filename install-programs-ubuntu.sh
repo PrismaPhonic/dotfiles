@@ -173,13 +173,6 @@ sudo snap install webstorm --classic
 # Install Goland
 sudo snap install goland --classic
 
-# Setup Golang tooling
-sudo snap install go --classic
-
-# Setup workspace for golang stuff
-mkdir ~/code
-mkdir ~/code/go
-
 # Fix Ownership on HomeDIR (might not be necessary)
 sudo gpgconf --kill dirmngr
 sudo chown -R $USER:$USER ~/.gnupg
@@ -217,17 +210,6 @@ sudo apt install docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo adduser pmfarr docker
-
-## UNCOMMENT IF YOU WANT MYSQL INSTEAD OF MARIADB
-# Install and setup mysql
-# sudo apt install mysql-server
-
-# Install and setup mariadb
-sudo apt update
-sudo apt install mariadb-server
-sudo apt install mariadb-client
-sudo apt install libmariadb-dev
-sudo mysql_secure_installation
 
 # Install kubectl
 sudo snap install kubectl --classic

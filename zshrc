@@ -12,6 +12,9 @@ export PATH="$PATH:/bin"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Adding here just in case?
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
 # Add flavor of mysql for vitess
 export MYSQL_FLAVOR=MariaDB
 
