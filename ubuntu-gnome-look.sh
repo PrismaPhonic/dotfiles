@@ -1,5 +1,4 @@
 # Set background to within
-sudo cp backgrounds/within.png /usr/share/backgrounds/within.png
 gsettings set org.gnome.desktop.background picture-uri /usr/share/background/within.png
 
 # Install some cool themes
