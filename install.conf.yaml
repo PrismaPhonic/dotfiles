@@ -81,6 +81,9 @@
       glob: true
       path: bin/*
       relink: true
-
+    /usr/share/gnome-shell/theme/:
+      glob: true
+      path: gnome-shell-theme/*
+      relink: true
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

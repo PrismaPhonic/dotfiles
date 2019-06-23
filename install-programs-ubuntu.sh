@@ -234,3 +234,6 @@ sudo snap install emacs --classic
 
 # Get neofetch for coolness factor
 sudo apt install neofetch
+
+# Colorpicker 
+sudo snap install pick-colour-picker
