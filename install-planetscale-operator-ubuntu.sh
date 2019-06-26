@@ -22,3 +22,6 @@ cd $CURRENT_DIR
 
 # Install operator2
 ./operator2-install.sh
+
+# Install kustomize
+./install-kustomize.sh
