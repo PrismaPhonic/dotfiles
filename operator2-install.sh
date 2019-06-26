@@ -24,6 +24,25 @@ cd ~/code/go/src/github.com/planetscale/
 git clone git@github.com:planetscale/planetscale-operator.git
 
 cd planetscale-operator/planetscale-operator2
+
+# Manually install gen-crd-api-reference-docs dependency
+mkdir dep-temp
+cd dep-temp
+wget https://github.com/ahmetb/gen-crd-api-reference-docs/releases/download/v0.1.2/gen-crd-api-reference-docs_linux_amd64.tar.gz
+tar xzf gen-crd-api-reference-docs_linux_amd64.tar.gz
+sudo chmod a+x gen-crd-api-reference-docs
+mv gen-crd-api-reference-docs $GOPATH/bin/gen-crd-api-reference-docs
+
+# Install AWS CLI
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+# Remove dependency temp folder
+cd ../
+sudo rm -r dep-temp
+
+# Build operator2
 dep ensure -v 
 make build 
 
@@ -32,3 +51,7 @@ sudo apt install jq
 
 cd ~/git/dotfiles
 sudo rm -r operator2-temp
+
+# Configure docker to use minikube daemon so we can test changes without pushing
+# to a registry
+eval $(minikube docker-env)
