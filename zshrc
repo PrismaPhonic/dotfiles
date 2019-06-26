@@ -232,3 +232,4 @@ fi
 
 # This fixes a display issue with Jetbrains IDEs on Linux
 export _JAVA_AWT_WM_NONREPARENTING=1
+alias node=nodejs

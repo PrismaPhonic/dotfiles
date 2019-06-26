@@ -144,6 +144,12 @@ npm install -g gulp
 npm install -g eslint
 npm install -g prettier
 
+# Install yarn (planetscale dev)
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install --no-install-recommends yarn
+echo "alias node=nodejs" >> ~/.zshrc
+
 # Install mono (C# development)
 sudo apt install gnupg ca-certificates
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
