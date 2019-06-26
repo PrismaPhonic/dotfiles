@@ -1,6 +1,15 @@
 # Install packages for KVM
 sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager
 
+# Install docker machine kvm driver
+mkdir docker-deps-temp
+cd docker-deps-temp
+curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2
+sudo chmod +x docker-machine-driver-kvm2
+sudo mv docker-machine-driver-kvm2 /usr/local/bin
+cd ../
+sudo rm -r docker-deps-temp
+
 # Add user to necessary groups
 sudo adduser pmfarr libvirt
 
