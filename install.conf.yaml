@@ -32,6 +32,7 @@
   - sudo ln -sf $(realpath ~/dotfiles/zsh/base16-shell/*) /usr/share/zsh/scripts/base16-shell/
   - sudo cp bspwm-session /usr/bin/bspwm-session
   - sudo cp backgrounds/within.png /usr/share/backgrounds/within.png
+  - sudo cp bootup-planetscale-operator2 /usr/bin/bootup-planetscale-operator2
 
 - link:
     ~/.dotfiles: ''
