@@ -144,6 +144,9 @@ npm install -g gulp
 npm install -g eslint
 npm install -g prettier
 
+# Install instant markdown mini-server
+npm install -g instant-markdown-d
+
 # Install yarn (planetscale dev)
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
