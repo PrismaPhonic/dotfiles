@@ -16,7 +16,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Add flavor of mysql for vitess
-export MYSQL_FLAVOR=MariaDB
+export MYSQL_FLAVOR=MySQL56
 
 ## Options section
 setopt correct                                                  # Auto correct mistakes
@@ -233,3 +233,6 @@ fi
 # This fixes a display issue with Jetbrains IDEs on Linux
 export _JAVA_AWT_WM_NONREPARENTING=1
 alias node=nodejs
+
+# For convenience
+export PSOPERATOR=$GOPATH/src/github.com/planetscale/planetscale-operator
