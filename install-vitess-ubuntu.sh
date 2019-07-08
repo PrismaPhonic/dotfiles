@@ -17,6 +17,10 @@ sudo rm -r temp
 mkdir ~/code
 mkdir ~/code/go
 
+# Install gvm to manage multiple golang versions
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+source ~/.gvm/scripts/gvm
+
 ###################
 ## MARIADB SETUP ##
 ###################
