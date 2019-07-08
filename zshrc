@@ -13,10 +13,14 @@ export PATH="$PATH:/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # Adding here just in case?
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$HOME/code/go/bin
 
 # Add flavor of mysql for vitess
-export MYSQL_FLAVOR=MySQL56
+export MYSQL_FLAVOR=MariaDB
+
+# Vitess path exports
+export VTROOT=$HOME/code/go
+export VTDATAROOT=$HOME/vtdataroot
 
 ## Options section
 setopt correct                                                  # Auto correct mistakes
@@ -235,4 +239,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 alias node=nodejs
 
 # For convenience
-export PSOPERATOR=$GOPATH/src/github.com/planetscale/planetscale-operator
+export PSOPERATOR=$HOME/code/go/src/github.com/planetscale/planetscale-operator
+
+[[ -s "/home/pmfarr/.gvm/scripts/gvm" ]] && source "/home/pmfarr/.gvm/scripts/gvm"
