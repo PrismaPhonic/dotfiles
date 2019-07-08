@@ -8,14 +8,14 @@ cd operator2-temp
 mkdir -p $GOPATH/src/github.com/planetscale
 
 # Set the release version variable
-RELEASE_VERSION=v0.7.0
+RELEASE_VERSION=v0.8.1
 curl -OJL https://github.com/operator-framework/operator-sdk/releases/download/${RELEASE_VERSION}/operator-sdk-${RELEASE_VERSION}-x86_64-linux-gnu
 
 # Verify the download release binary
 curl -OJL https://github.com/operator-framework/operator-sdk/releases/download/${RELEASE_VERSION}/operator-sdk-${RELEASE_VERSION}-x86_64-linux-gnu.asc
 
+gpg --recv-key "0CF50BEE7E4DF6445E08C0EA9AFDE59E90D2B445"
 gpg --verify operator-sdk-${RELEASE_VERSION}-x86_64-linux-gnu.asc
-gpg --recv-key "0E3182AFC996ABF6"
 
 sudo chmod +x operator-sdk-${RELEASE_VERSION}-x86_64-linux-gnu \
 && sudo cp operator-sdk-${RELEASE_VERSION}-x86_64-linux-gnu /usr/local/bin/operator2-sdk
