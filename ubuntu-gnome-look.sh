@@ -78,4 +78,8 @@ gsettings set org.gnome.shell.extensions.user-theme name "Plata-Noir-Compact"
 # Enable material shell
 gnome-shell-extension-tool -e material-shell@papyelgringo
 
+# Set up font settings
+gsettings set org.gnome.desktop.interface font-name 'Roboto Bold 11'
+
 dconf load / < dconf-settings.ini
+
