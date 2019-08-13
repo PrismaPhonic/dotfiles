@@ -4,7 +4,7 @@
 umask 022
 
 # Set our default path
-PATH="/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.config/bspwm:$HOME/.config/bspwm/panel:$HOME/.bin:/snap/bin:/usr/local/go/bin:$HOME/code/go/bin"
+PATH="/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.config/bspwm:$HOME/.config/bspwm/panel:$HOME/.bin:/snap/bin:/usr/local/go/bin:$HOME/code/go/bin:$HOME/.cargo/bin"
 export PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
@@ -18,9 +18,6 @@ if test -d /etc/profile.d/; then
 	done
 	unset profile
 fi
-
-# Source global zsh config
-source ~/.zshrc
 
 # Termcap is outdated, old, and crusty, kill it.
 unset TERMCAP

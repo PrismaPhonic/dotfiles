@@ -27,9 +27,9 @@ source ~/.gvm/scripts/gvm
 
 # Install and setup mariadb
 sudo apt update
-sudo apt install mariadb-server
-sudo apt install mariadb-client
-sudo apt install libmariadb-dev
+sudo apt install mariadb-server \
+	mariadb-client \
+	libmariadb-dev
 # sudo mysql_secure_installation
 
 ##################
