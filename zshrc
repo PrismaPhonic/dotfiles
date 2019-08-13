@@ -241,4 +241,14 @@ alias node=nodejs
 # For convenience
 export PSOPERATOR=$HOME/code/go/src/github.com/planetscale/planetscale-operator
 
+# for staging
+alias gcpstagctl='kubectl --kubeconfig=/home/pmfarr/.kube/gcp.staging.kubeconfig'
+alias awsstagctl='kubectl --kubeconfig=/home/pmfarr/.kube/awsstaging2.kubeconfig'
+alias pmfstagctl='kubectl --kubeconfig=/home/pmfarr/.kube/pmfarr-aws-useast1.kubeconfig'
+alias awsprodctl='kubectl --kubeconfig=/home/pmfarr/.kube/prod-aws-uswest2.kubeconfig'
+alias gcpprodctl='kubectl --kubeconfig=/home/pmfarr/.kube/prod-gcp-uscentral1.kubeconfig'
+
 [[ -s "/home/pmfarr/.gvm/scripts/gvm" ]] && source "/home/pmfarr/.gvm/scripts/gvm"
+
+source /etc/profile
+export PATH=$HOME/bin:$PATH
