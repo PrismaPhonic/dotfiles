@@ -252,3 +252,15 @@ alias gcpprodctl='kubectl --kubeconfig=/home/pmfarr/.kube/prod-gcp-uscentral1.ku
 
 source /etc/profile
 export PATH=$HOME/bin:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/pmfarr/google-cloud-sdk/path.zsh.inc' ]; then . '/home/pmfarr/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/pmfarr/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/pmfarr/google-cloud-sdk/completion.zsh.inc'; fi
+
+# adding path for yarn global binaries
+export PATH="$(yarn global bin):$PATH"
+
+# add pycharm binary to path
+export PATH=$HOME/pycharm-2019.2.3/bin:$PATH
