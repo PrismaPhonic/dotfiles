@@ -12,6 +12,16 @@ export PATH="$PATH:/bin"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Adding here just in case?
+export PATH=$PATH:$GOROOT/bin:$HOME/code/go/bin
+
+# Add flavor of mysql for vitess
+export MYSQL_FLAVOR=MariaDB
+
+# Vitess path exports
+export VTROOT=$HOME/code/go
+export VTDATAROOT=$HOME/vtdataroot
+
 ## Options section
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
@@ -227,15 +237,33 @@ fi
 # This fixes a display issue with Jetbrains IDEs on Linux
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# Add go binary to path
+export PATH=$PATH:$GOROOT/bin
+alias node=nodejs
+
+# For convenience
+export PSOPERATOR=$HOME/code/go/src/github.com/planetscale/planetscale-operator
+
+# for staging
+alias gcpstagctl='kubectl --kubeconfig=/home/pmfarr/.kube/gcp.staging.kubeconfig'
+alias awsstagctl='kubectl --kubeconfig=/home/pmfarr/.kube/awsstaging2.kubeconfig'
+alias pmfstagctl='kubectl --kubeconfig=/home/pmfarr/.kube/pmfarr-aws-useast1.kubeconfig'
+alias awsprodctl='kubectl --kubeconfig=/home/pmfarr/.kube/prod-aws-uswest2.kubeconfig'
+alias gcpprodctl='kubectl --kubeconfig=/home/pmfarr/.kube/prod-gcp-uscentral1.kubeconfig'
+
+[[ -s "/home/pmfarr/.gvm/scripts/gvm" ]] && source "/home/pmfarr/.gvm/scripts/gvm"
+
+source /etc/profile
+export PATH=$HOME/bin:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/pmfarr/google-cloud-sdk/path.zsh.inc' ]; then . '/home/pmfarr/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/pmfarr/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/pmfarr/google-cloud-sdk/completion.zsh.inc'; fi
+
 # adding path for yarn global binaries
 export PATH="$(yarn global bin):$PATH"
 
-# add psk
-export PATH=$PATH:$GOPATH/src/github.com/planetscale/planetscale-operator/utils/kubectl:$GOPATH/bin
-
-# add rbenv
-export PATH=$PATH:$HOME/.rbenv/bin
-eval "$(rbenv init -)"
-
-# Add go binary to path
-export PATH=$PATH:$GOROOT/bin
+# add pycharm binary to path
+export PATH=$HOME/pycharm-2019.2.3/bin:$PATH

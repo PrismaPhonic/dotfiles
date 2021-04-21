@@ -31,6 +31,8 @@
   - rm ~/.lemonpanelrc
   - sudo ln -sf $(realpath ~/dotfiles/zsh/base16-shell/*) /usr/share/zsh/scripts/base16-shell/
   - sudo cp bspwm-session /usr/bin/bspwm-session
+  - sudo cp backgrounds/within.png /usr/share/backgrounds/within.png
+  - sudo cp bootup-planetscale-operator2 /usr/bin/bootup-planetscale-operator2
 
 - link:
     ~/.dotfiles: ''
@@ -42,9 +44,6 @@
     ~/.fehbg:
     ~/.lemonpanelrc:
     ~/.limepanelrc:
-    /usr/share/backgrounds/within.png:
-      path: backgrounds/within.png
-      relink: true
     /usr/share/xsessions/bspwm.desktop:
       path: bspwm.desktop
       relink: true
@@ -83,6 +82,9 @@
       glob: true
       path: bin/*
       relink: true
-
+    /usr/share/gnome-shell/theme/:
+      glob: true
+      path: gnome-shell-theme/*
+      relink: true
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

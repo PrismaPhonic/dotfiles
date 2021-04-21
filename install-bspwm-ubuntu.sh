@@ -16,6 +16,8 @@ sudo apt install git \
                       libx11-xcb-dev
 
 # Install bspwm and utils
+mkdir ~/development
+mkdir ~/development/github.com
 mkdir ~/development/github.com/defektive
 mkdir ~/development/github.com/baskerville
 mkdir ~/development/github.com/krypt-n
@@ -37,6 +39,3 @@ cd ../xdo/ && make && sudo make install
 cd ~/development/github.com/krypt-n
 git clone https://github.com/krypt-n/bar.git
 cd bar && make && sudo make install
-
-# Add bspwm to xsessions
-sudo cp ~/development/github.com/baskerville/bspwm/contrib/freedesktop/bspwm.desktop /usr/share/xsessions/bspwm.desktop

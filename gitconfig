@@ -1,5 +1,5 @@
 [user]
-	email = Peter@PrismaPhonic.com\n
+	email = Peter@PrismaPhonic.com
 	name = Peter Farr
 [url "git@github.com:"]
 	insteadOf = https://github.com

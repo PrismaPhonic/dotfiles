@@ -19,11 +19,6 @@ if test -d /etc/profile.d/; then
 	unset profile
 fi
 
-# Source global bash config
-if test "$PS1" && test "$BASH" && test -r /etc/bash.bashrc; then
-	. /etc/bash.bashrc
-fi
-
 # Termcap is outdated, old, and crusty, kill it.
 unset TERMCAP
 

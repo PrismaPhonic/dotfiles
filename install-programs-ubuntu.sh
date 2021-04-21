@@ -128,6 +128,9 @@ rustup install nightly
 # Install RLS
 rustup component add rls rust-analysis rust-src
 
+# Make sure cargo is available for rest of installs
+export PATH="$PATH:$HOME/.cargo/bin"
+
 # Install neovim npm module globally
 npm install -g neovim
 
@@ -140,6 +143,15 @@ npm install -g gulp
 # Install eslint and prettier
 npm install -g eslint
 npm install -g prettier
+
+# Install instant markdown mini-server
+npm install -g instant-markdown-d
+
+# Install yarn (planetscale dev)
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install --no-install-recommends yarn
+echo "alias node=nodejs" >> ~/.zshrc
 
 # Install mono (C# development)
 sudo apt install gnupg ca-certificates
@@ -170,16 +182,9 @@ sudo snap install webstorm --classic
 # Install Goland
 sudo snap install goland --classic
 
-# Setup Golang tooling
-sudo snap install go --classic
-
-# Setup workspace for golang stuff
-mkdir ~/code
-mkdir ~/code/go
-
 # Fix Ownership on HomeDIR (might not be necessary)
-# sudo gpgconf --kill dirmngr
-# sudo chown -R $USER:$USER ~/.gnupg
+sudo gpgconf --kill dirmngr
+sudo chown -R $USER:$USER ~/.gnupg
 
 # Install Lastpass
 mkdir temp
@@ -215,10 +220,6 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo adduser pmfarr docker
 
-# Install and setup mysql
-sudo apt install mysql-server
-sudo mysql_secure_installation
-
 # Install kubectl
 sudo snap install kubectl --classic
 
@@ -230,4 +231,32 @@ sudo snap install slack --classic
 
 # Install video and audio codecs
 sudo apt install libdvdnav4 libdvdread4 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libdvd-pkg
-sudo apt install ubuntu-restricted-extras
+
+# Commenting out for now because I keep getting a bug when installing this
+# sudo apt install ubuntu-restricted-extras
+
+# Install emacs because apparently it's necessary at Planetscale
+sudo snap install emacs --classic
+
+# Install minikube and all dependencies
+./install-minikube.sh
+
+# Get neofetch for coolness factor
+sudo apt install neofetch
+
+# Colorpicker 
+sudo snap install pick-colour-picker
+
+# Install markdown editor/viewer
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-get update
+sudo apt-get install typora
+
+# Install signal
+curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+sudo apt update && sudo apt install signal-desktop
+
+# Install thunderbird (not included in minimal install)
+sudo apt install thunderbird
