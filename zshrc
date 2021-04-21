@@ -236,6 +236,9 @@ fi
 
 # This fixes a display issue with Jetbrains IDEs on Linux
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Add go binary to path
+export PATH=$PATH:$GOROOT/bin
 alias node=nodejs
 
 # For convenience
