@@ -226,3 +226,16 @@ fi
 
 # This fixes a display issue with Jetbrains IDEs on Linux
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# adding path for yarn global binaries
+export PATH="$(yarn global bin):$PATH"
+
+# add psk
+export PATH=$PATH:$GOPATH/src/github.com/planetscale/planetscale-operator/utils/kubectl:$GOPATH/bin
+
+# add rbenv
+export PATH=$PATH:$HOME/.rbenv/bin
+eval "$(rbenv init -)"
+
+# Add go binary to path
+export PATH=$PATH:$GOROOT/bin
